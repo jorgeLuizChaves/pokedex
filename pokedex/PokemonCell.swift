@@ -16,6 +16,19 @@ class PokemonCell: UICollectionViewCell {
     
     var pokemon: Pokemon!
     
+    static let CELL_IDENTIFIER = "pokemonCell"
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.layer.cornerRadius = 5.0
+        self.clipsToBounds = true
+    }
+    
     func configureCell(pokemon: Pokemon){
         self.pokemon = pokemon
         
