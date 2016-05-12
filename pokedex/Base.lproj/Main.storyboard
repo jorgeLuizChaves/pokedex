@@ -25,36 +25,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="s49-0q-iGW">
                                 <rect key="frame" x="0.0" y="114" width="600" height="486"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="286" id="SlI-D4-z6f"/>
-                                    <constraint firstAttribute="height" constant="286" id="lXT-Fy-OHk"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="SlI-D4-z6f"/>
-                                        <exclude reference="lXT-Fy-OHk"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="SlI-D4-z6f"/>
-                                        <exclude reference="lXT-Fy-OHk"/>
-                                    </mask>
-                                </variation>
                             </imageView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="I9M-Y1-YjE">
-                                <rect key="frame" x="0.0" y="70" width="600" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Ogq-Gn-zab"/>
-                                    <constraint firstAttribute="height" constant="44" id="fBf-Uo-TVn"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Ogq-Gn-zab"/>
-                                    </mask>
-                                </variation>
-                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IuQ-vQ-N4Q">
                                 <rect key="frame" x="20" y="134" width="560" height="446"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -115,6 +86,7 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="49F-hy-9JQ"/>
+                                        <exclude reference="7Nw-hK-3Ix"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
@@ -164,44 +136,48 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="I9M-Y1-YjE">
+                                <rect key="frame" x="0.0" y="70" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Ogq-Gn-zab"/>
+                                    <constraint firstAttribute="height" constant="44" id="fBf-Uo-TVn"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ogq-Gn-zab"/>
+                                    </mask>
+                                </variation>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="s49-0q-iGW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1EC-lb-Ky6"/>
                             <constraint firstItem="IuQ-vQ-N4Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="1Zd-aB-lf7"/>
+                            <constraint firstItem="IuQ-vQ-N4Q" firstAttribute="centerY" secondItem="s49-0q-iGW" secondAttribute="centerY" id="F44-dz-q9e"/>
                             <constraint firstItem="I9M-Y1-YjE" firstAttribute="top" secondItem="8bI-UN-DRt" secondAttribute="bottom" id="FRG-z2-ZDf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IuQ-vQ-N4Q" secondAttribute="bottom" constant="20" id="FcZ-lR-wLV"/>
                             <constraint firstItem="8bI-UN-DRt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Hjo-Y1-HsH"/>
-                            <constraint firstItem="s49-0q-iGW" firstAttribute="top" secondItem="I9M-Y1-YjE" secondAttribute="bottom" id="Mld-MW-0iw"/>
                             <constraint firstAttribute="trailing" secondItem="I9M-Y1-YjE" secondAttribute="trailing" id="N7I-yQ-XQ4"/>
                             <constraint firstAttribute="trailing" secondItem="8bI-UN-DRt" secondAttribute="trailing" id="OcA-Wv-xpu"/>
                             <constraint firstItem="IuQ-vQ-N4Q" firstAttribute="top" secondItem="I9M-Y1-YjE" secondAttribute="bottom" constant="20" id="YL6-CB-c2f"/>
-                            <constraint firstItem="s49-0q-iGW" firstAttribute="top" secondItem="I9M-Y1-YjE" secondAttribute="bottom" id="ZFS-O5-iLj"/>
-                            <constraint firstItem="s49-0q-iGW" firstAttribute="top" secondItem="I9M-Y1-YjE" secondAttribute="bottom" id="bMx-Ne-UkC"/>
+                            <constraint firstItem="IuQ-vQ-N4Q" firstAttribute="centerX" secondItem="s49-0q-iGW" secondAttribute="centerX" id="Yjy-Xa-P0Q"/>
                             <constraint firstAttribute="trailing" secondItem="s49-0q-iGW" secondAttribute="trailing" id="beT-OV-7lU"/>
                             <constraint firstItem="8bI-UN-DRt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eUL-WC-cAS"/>
+                            <constraint firstItem="s49-0q-iGW" firstAttribute="top" secondItem="I9M-Y1-YjE" secondAttribute="bottom" id="fBD-lZ-n4Q"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s49-0q-iGW" secondAttribute="bottom" id="hxP-Gt-J1z"/>
-                            <constraint firstItem="s49-0q-iGW" firstAttribute="top" secondItem="I9M-Y1-YjE" secondAttribute="bottom" constant="250" id="qD1-WL-WLD"/>
                             <constraint firstItem="I9M-Y1-YjE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rZo-nE-EIC"/>
                             <constraint firstAttribute="trailing" secondItem="IuQ-vQ-N4Q" secondAttribute="trailing" constant="20" id="xvk-xF-6pO"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Mld-MW-0iw"/>
-                                <exclude reference="bMx-Ne-UkC"/>
-                                <exclude reference="qD1-WL-WLD"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact">
-                            <mask key="constraints">
-                                <include reference="Mld-MW-0iw"/>
-                                <exclude reference="ZFS-O5-iLj"/>
-                                <exclude reference="qD1-WL-WLD"/>
+                                <exclude reference="YL6-CB-c2f"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="collection" destination="IuQ-vQ-N4Q" id="I9V-5j-AZN"/>
+                        <outlet property="searchBar" destination="I9M-Y1-YjE" id="XUb-kW-K9h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -10,31 +10,38 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,
-UICollectionViewDelegateFlowLayout{
+UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
     
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collection: UICollectionView!
-    var pokemons = [Pokemon]()
     
-    private let NUMBER_OF_SECTIONS = 1
+    var onSearchMode = false
+    var pokemons = [Pokemon]()
+    var pokemonsFilter = [Pokemon]()
+    var mediaPlayer:  AVAudioPlayer!
+    
+    
+    private let INFINITY = -1
     private let CELL_WIDTH = 100
     private let CELL_HEIGTH = 100
-    
-    private let BUTTON_TRANSPARENT = CGFloat(0.2)
+    private let FILE_TYPE = "mp3"
+    private let FILE_NAME = "music"
+    private let NUMBER_OF_SECTIONS = 1
     private let BUTTON_OPAQUE = CGFloat(1)
-    private let INFINITY = -1
+    private let BUTTON_TRANSPARENT = CGFloat(0.2)
     
-    var mediaPlayer:  AVAudioPlayer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collection.delegate = self
-        collection.dataSource = self
+        configureDelegates()
+        configureCollectionDataSource()
+        
         
         let service = PokedexCSVService()
         pokemons = service.getPokemons()
         
-        let musicPath = NSBundle.mainBundle().pathForResource("music", ofType: "mp3")!
+        let musicPath = NSBundle.mainBundle().pathForResource(FILE_NAME, ofType: FILE_TYPE)!
         do{
             mediaPlayer = try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: musicPath))
             mediaPlayer.prepareToPlay()
@@ -54,15 +61,15 @@ UICollectionViewDelegateFlowLayout{
     @IBAction func onClickMusic(sender: UIButton) {
         if mediaPlayer.playing {
             mediaPlayer.stop()
-            sender.alpha = self.BUTTON_TRANSPARENT
+            sender.alpha = BUTTON_TRANSPARENT
         }else{
             mediaPlayer.play()
-            sender.alpha = self.BUTTON_OPAQUE
+            sender.alpha = BUTTON_OPAQUE
         }
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pokemons.count
+        return self.countPokemons()
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -81,14 +88,50 @@ UICollectionViewDelegateFlowLayout{
         let pokemonCell = collectionView.dequeueReusableCellWithReuseIdentifier(PokemonCell.CELL_IDENTIFIER, forIndexPath: indexPath)
         
         if let cell = pokemonCell as? PokemonCell{
-            let poke = pokemons[indexPath.row]
+            let pokemonList = self.getPokemonsList()
+            let poke = pokemonList[indexPath.row]
             cell.configureCell(poke)
             return cell
         }else{
             return UICollectionViewCell()
         }
     }
-
-
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if(searchBar.text != nil && searchBar.text != ""){
+            let pokeNameLowerCase = searchBar.text!.lowercaseString
+            onSearchMode = true
+            pokemonsFilter = pokemons.filter({$0.name.rangeOfString(pokeNameLowerCase) != nil})
+            collection.reloadData()
+        }else{
+            onSearchMode = false
+        }
+    }
+    
+    private func countPokemons() -> Int {
+        if(isOnSearchMode()){
+            return pokemonsFilter.count
+        }
+        return pokemons.count
+    }
+    
+    private func getPokemonsList() -> [Pokemon] {
+        if(isOnSearchMode()){
+            return pokemonsFilter
+        }
+        return pokemons
+    }
+    
+    private func isOnSearchMode() -> Bool {
+        return onSearchMode
+    }
+    
+    private func configureDelegates(){
+        collection.delegate = self
+        searchBar.delegate = self
+    }
+    
+    private func configureCollectionDataSource(){
+        collection.dataSource = self
+    }
 }
-
