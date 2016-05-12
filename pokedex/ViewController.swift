@@ -77,7 +77,10 @@ UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
+        let pokemonsList = getPokemonsList()
+        let pokemon = pokemonsList[indexPath.row]
+
+        performSegueWithIdentifier("showPokemonDetail", sender: pokemon)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
@@ -105,6 +108,16 @@ UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
             collection.reloadData()
         }else{
             onSearchMode = false
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "showPokemonDetail"){
+            if let pokemonDetailVC = segue.destinationViewController as? PokemonDetailVC {
+                if let poke = sender as? Pokemon{
+                    pokemonDetailVC.pokemon = poke
+                }
+            }
         }
     }
     
