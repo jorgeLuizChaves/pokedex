@@ -30,6 +30,7 @@ UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
     private let NUMBER_OF_SECTIONS = 1
     private let BUTTON_OPAQUE = CGFloat(1)
     private let BUTTON_TRANSPARENT = CGFloat(0.2)
+    private let SEGUE_DETAIL_POKEMON = "showPokemonDetail"
     
 
     override func viewDidLoad() {
@@ -40,6 +41,8 @@ UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
         
         let service = PokedexCSVService()
         pokemons = service.getPokemons()
+        
+        searchBar.returnKeyType = UIReturnKeyType.Done
         
         let musicPath = NSBundle.mainBundle().pathForResource(FILE_NAME, ofType: FILE_TYPE)!
         do{
@@ -80,7 +83,7 @@ UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
         let pokemonsList = getPokemonsList()
         let pokemon = pokemonsList[indexPath.row]
 
-        performSegueWithIdentifier("showPokemonDetail", sender: pokemon)
+        performSegueWithIdentifier(SEGUE_DETAIL_POKEMON, sender: pokemon)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
@@ -107,12 +110,20 @@ UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
             pokemonsFilter = pokemons.filter({$0.name.rangeOfString(pokeNameLowerCase) != nil})
             collection.reloadData()
         }else{
+             hideKeyboard()
             onSearchMode = false
+            collection.reloadData()
+           
+
         }
     }
     
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        hideKeyboard()
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "showPokemonDetail"){
+        if(segue.identifier == SEGUE_DETAIL_POKEMON){
             if let pokemonDetailVC = segue.destinationViewController as? PokemonDetailVC {
                 if let poke = sender as? Pokemon{
                     pokemonDetailVC.pokemon = poke
@@ -146,5 +157,9 @@ UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
     
     private func configureCollectionDataSource(){
         collection.dataSource = self
+    }
+    
+    private func hideKeyboard(){
+        view.endEditing(true)
     }
 }
