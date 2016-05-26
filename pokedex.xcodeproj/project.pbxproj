@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85302B291CF74876005F545B /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85302B281CF74876005F545B /* SF-UI-Display-Regular.otf */; };
+		85302B2B1CF74897005F545B /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85302B2A1CF74897005F545B /* SF-UI-Display-Bold.otf */; };
+		85302B2D1CF748AE005F545B /* SF-UI-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85302B2C1CF748AE005F545B /* SF-UI-Display-Heavy.otf */; };
+		85302B2F1CF748B8005F545B /* SF-UI-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85302B2E1CF748B8005F545B /* SF-UI-Display-Light.otf */; };
+		85302B311CF748CB005F545B /* SF-UI-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85302B301CF748CB005F545B /* SF-UI-Display-Medium.otf */; };
+		85302B331CF748DA005F545B /* SF-UI-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85302B321CF748DA005F545B /* SF-UI-Text-Regular.otf */; };
+		85302B351CF748EA005F545B /* SF-UI-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85302B341CF748EA005F545B /* SF-UI-Text-Bold.otf */; };
 		854D3A7D1CE18512003111EA /* PokemonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854D3A7C1CE18512003111EA /* PokemonTest.swift */; };
 		854D60481CE2B84C00BD42AB /* ParserCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854D60471CE2B84C00BD42AB /* ParserCSV.swift */; };
 		854D604C1CE2B8F500BD42AB /* PokedexCSVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854D604B1CE2B8F500BD42AB /* PokedexCSVService.swift */; };
@@ -49,6 +56,13 @@
 
 /* Begin PBXFileReference section */
 		38D4AE05F4E1A29E8515696B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		85302B281CF74876005F545B /* SF-UI-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Regular.otf"; sourceTree = "<group>"; };
+		85302B2A1CF74897005F545B /* SF-UI-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Bold.otf"; sourceTree = "<group>"; };
+		85302B2C1CF748AE005F545B /* SF-UI-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Heavy.otf"; sourceTree = "<group>"; };
+		85302B2E1CF748B8005F545B /* SF-UI-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Light.otf"; sourceTree = "<group>"; };
+		85302B301CF748CB005F545B /* SF-UI-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Medium.otf"; sourceTree = "<group>"; };
+		85302B321CF748DA005F545B /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Regular.otf"; sourceTree = "<group>"; };
+		85302B341CF748EA005F545B /* SF-UI-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Bold.otf"; sourceTree = "<group>"; };
 		854D3A7C1CE18512003111EA /* PokemonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonTest.swift; sourceTree = "<group>"; };
 		854D60471CE2B84C00BD42AB /* ParserCSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserCSV.swift; sourceTree = "<group>"; };
 		854D604B1CE2B8F500BD42AB /* PokedexCSVService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexCSVService.swift; sourceTree = "<group>"; };
@@ -155,6 +169,13 @@
 		8561A8D91CE14FDF00459249 /* pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				85302B281CF74876005F545B /* SF-UI-Display-Regular.otf */,
+				85302B2E1CF748B8005F545B /* SF-UI-Display-Light.otf */,
+				85302B2C1CF748AE005F545B /* SF-UI-Display-Heavy.otf */,
+				85302B2A1CF74897005F545B /* SF-UI-Display-Bold.otf */,
+				85302B301CF748CB005F545B /* SF-UI-Display-Medium.otf */,
+				85302B321CF748DA005F545B /* SF-UI-Text-Regular.otf */,
+				85302B341CF748EA005F545B /* SF-UI-Text-Bold.otf */,
 				854D604F1CE3685200BD42AB /* music.mp3 */,
 				854D604D1CE3659200BD42AB /* pokemon.ttf */,
 				854D60461CE2B82100BD42AB /* Util */,
@@ -334,8 +355,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85302B2F1CF748B8005F545B /* SF-UI-Display-Light.otf in Resources */,
+				85302B291CF74876005F545B /* SF-UI-Display-Regular.otf in Resources */,
+				85302B331CF748DA005F545B /* SF-UI-Text-Regular.otf in Resources */,
+				85302B311CF748CB005F545B /* SF-UI-Display-Medium.otf in Resources */,
+				85302B351CF748EA005F545B /* SF-UI-Text-Bold.otf in Resources */,
 				854D604E1CE3659200BD42AB /* pokemon.ttf in Resources */,
+				85302B2B1CF74897005F545B /* SF-UI-Display-Bold.otf in Resources */,
 				8561A8E51CE14FDF00459249 /* LaunchScreen.storyboard in Resources */,
+				85302B2D1CF748AE005F545B /* SF-UI-Display-Heavy.otf in Resources */,
 				854D60501CE3685200BD42AB /* music.mp3 in Resources */,
 				8561A8E21CE14FDF00459249 /* Assets.xcassets in Resources */,
 				8561A90C1CE1524100459249 /* pokemon.csv in Resources */,
