@@ -1,10 +1,13 @@
 PODS:
   - Alamofire (3.4.0)
+  - TestFairy (1.7.4)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
+  - TestFairy
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  TestFairy: d82c5aaf1b54098eab8668805e2d8cb07edaecf8
 
 COCOAPODS: 0.39.0

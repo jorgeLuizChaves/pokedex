@@ -26,6 +26,7 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var actualEvo: UIImageView!
     @IBOutlet weak var pokeImage: UIImageView!
     @IBOutlet weak var nextEvolutionLabel: UILabel!
+    @IBOutlet weak var loadingView: UIView!
     
     var pokemon: Pokemon!
     
@@ -58,6 +59,7 @@ class PokemonDetailVC: UIViewController {
                 self.nextEvo.hidden = true
                 self.nextEvolutionLabel.text = "No evolution"
             }
+            self.loadingView.hidden = true
             
         }
     }

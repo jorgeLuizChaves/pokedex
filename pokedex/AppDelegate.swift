@@ -12,10 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let TEST_FAIRY_APP_ID = "9dcdb274105908729dc1dd177b1e526b729c9045"
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        TestFairy.begin(self.TEST_FAIRY_APP_ID)
         return true
     }
 
