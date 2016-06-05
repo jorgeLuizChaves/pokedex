@@ -12,20 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let TEST_FAIRY_APP_ID = "9dcdb274105908729dc1dd177b1e526b729c9045"
-
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        TestFairy.begin(self.TEST_FAIRY_APP_ID)
         
-        let infos: [NSObject: AnyObject] = [TFSDKIdentityTraitNameKey: "Jorge",
-                                            TFSDKIdentityTraitEmailAddressKey: "teste@teste.com"]
+        self.configure()
         
-        
-        
-        
-        TestFairy.identify("Jorge Luiz", traits: infos)
         return true
     }
 
@@ -49,6 +41,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    private func configure(){
+        if(ENVIRONMENT.isStaging()){
+            self.startTestFairy()
+        }
+    }
+    
+    
+    private func startTestFairy(){
+        TestFairy.begin(TEST_FAIRY_APP_ID)
+        
+        let infos: [NSObject: AnyObject] = [TFSDKIdentityTraitNameKey: "Jorge",
+                                            TFSDKIdentityTraitEmailAddressKey: "teste@teste.com"]
+        TestFairy.identify("Jorge Luiz", traits: infos)
     }
 
 

@@ -1,25 +1,17 @@
 //
-//  PokemonDetailVC.swift
+//  PokemonInfoVC.swift
 //  pokedex
 //
-//  Created by Jorge Luiz on 5/11/16.
+//  Created by Jorge Luiz on 6/5/16.
 //  Copyright © 2016 Jorge Luiz. All rights reserved.
 //
 
-import Foundation
 import UIKit
-import Alamofire
 
-class PokemonDetailVC: UIViewController {
+class PokemonInfoVC: UIViewController {
     
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var segmentedPokemon: UISegmentedControl!
-    @IBOutlet weak var pokemonDetailView: UIView!
-    
-    let POKEMON_INFO_VIEW = 0
-    let POKEMON_MOVES_VIEW = 1
-    
-    
+//    var pokemon: Pokemon!
+//    
 //    @IBOutlet weak var type: UILabel!
 //    @IBOutlet weak var desc: UILabel!
 //    @IBOutlet weak var height: UILabel!
@@ -33,17 +25,15 @@ class PokemonDetailVC: UIViewController {
 //    @IBOutlet weak var pokeImage: UIImageView!
 //    @IBOutlet weak var nextEvolutionLabel: UILabel!
     
-    var pokemon: Pokemon!
+    static let IDENTIFIER_NAME = "pokemonInfo"
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.loadViewController(PokemonInfoVC.IDENTIFIER_NAME)
-        
+
 //        pokemon.dowloadPokemonDetail{ ()  in
 //            //this will be called after download is done
 //            let pokemon = self.pokemon
-//            self.name.text = pokemon.name
 //            self.pokeImage.image =  UIImage(named: "\(pokemon.pokedexId)")
 //            self.pokedexId.text = "\(pokemon.pokedexId)"
 //            self.weight.text = pokemon.weight
@@ -64,34 +54,26 @@ class PokemonDetailVC: UIViewController {
 //                self.nextEvo.hidden = true
 //                self.nextEvolutionLabel.text = "No evolution"
 //            }
-//            self.loadingView.hidden = true
-//            
 //        }
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        
+
     }
 
-    @IBAction func onBackButtonPressed(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onSeguementedButtonClicked(sender: UISegmentedControl){
-        let option = sender.selectedSegmentIndex
-        
-        if(option == self.POKEMON_INFO_VIEW){
-            self.loadViewController(PokemonInfoVC.IDENTIFIER_NAME)
-        }
-    }
     
-    private func loadViewController(name: String){
-        let currentVC = self.storyboard?.instantiateViewControllerWithIdentifier(name)
-        if let viewController = currentVC {
-            viewController.view.frame = pokemonDetailView.bounds
-            pokemonDetailView.addSubview(viewController.view)
-            addChildViewController(viewController)
-            viewController.didMoveToParentViewController(self)
-        }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
+    */
+
 }

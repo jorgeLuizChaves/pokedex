@@ -45,15 +45,8 @@ UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
         searchBar.returnKeyType = UIReturnKeyType.Done
         
         let musicPath = NSBundle.mainBundle().pathForResource(FILE_NAME, ofType: FILE_TYPE)!
-        do{
-            mediaPlayer = try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: musicPath))
-            mediaPlayer.prepareToPlay()
-            mediaPlayer.numberOfLoops = INFINITY
-            mediaPlayer.play()
-        }catch let err as NSError{
-            print(err.debugDescription)
-        }
-        
+        self.startMusic(musicPath)
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -128,6 +121,19 @@ UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
                 if let poke = sender as? Pokemon{
                     pokemonDetailVC.pokemon = poke
                 }
+            }
+        }
+    }
+    
+    private func startMusic(musicPath: String){
+        if(ENVIRONMENT.isProd()){
+            do{
+                mediaPlayer = try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: musicPath))
+                mediaPlayer.prepareToPlay()
+                mediaPlayer.numberOfLoops = INFINITY
+                mediaPlayer.play()
+            }catch let err as NSError{
+                print(err.debugDescription)
             }
         }
     }

@@ -24,8 +24,10 @@ class PokemonCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        self.layer.cornerRadius = 5.0
+    }
+    
+    override func awakeFromNib() {
+        self.layer.cornerRadius = 5
         self.clipsToBounds = true
     }
     

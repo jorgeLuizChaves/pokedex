@@ -11,10 +11,7 @@ import XCTest
 
 
 class EnvironmentTest: XCTestCase {
-    
-    
-    
-    
+
     override func setUp() {
         super.setUp()
         
@@ -25,16 +22,28 @@ class EnvironmentTest: XCTestCase {
     }
     
     func testIsProduction() {
-        var envProd : Environment
-        var envStaging : Environment
-        var envDev : Environment
-        
-        envProd = Environment.PRODUCTION
-        envDev = Environment.DEVELOPMENT
-        envStaging = Environment.STAGING
+        let envProd = Environment.PRODUCTION
         
         XCTAssertTrue(envProd.isProd())
         XCTAssertFalse(envProd.isDev())
         XCTAssertFalse(envProd.isStaging())
     }
+    
+    func testIsDev() {
+        let envProd = Environment.DEVELOPMENT
+        
+        XCTAssertTrue(envProd.isDev())
+        XCTAssertFalse(envProd.isProd())
+        XCTAssertFalse(envProd.isStaging())
+    }
+    
+    func testIsStaging() {
+        let envProd = Environment.STAGING
+        
+        XCTAssertTrue(envProd.isStaging())
+        XCTAssertFalse(envProd.isDev())
+        XCTAssertFalse(envProd.isProd())
+    }
+    
+    
 }
