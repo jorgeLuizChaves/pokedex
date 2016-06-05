@@ -11,11 +11,11 @@ pod 'Alamofire', '~> 3.4'
 pod 'TestFairy'
 
 target 'pokedex' do
-
+pod 'Alamofire', '~> 3.4'
 end
 
 target 'pokedexTests' do
-
+pod 'TestFairy'
 end
 
 target 'pokedexUITests' do

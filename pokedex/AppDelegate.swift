@@ -18,6 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         TestFairy.begin(self.TEST_FAIRY_APP_ID)
+        
+        let infos: [NSObject: AnyObject] = [TFSDKIdentityTraitNameKey: "Jorge",
+                                            TFSDKIdentityTraitEmailAddressKey: "teste@teste.com"]
+        
+        
+        
+        
+        TestFairy.identify("Jorge Luiz", traits: infos)
         return true
     }
 

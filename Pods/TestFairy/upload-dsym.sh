@@ -1,4 +1,6 @@
-TFAIRY_ENDPOINT="http://app.testfairy.com/upload/dsym/"
+#!/bin/sh
+
+TESTFAIRY_ENDPOINT="http://app.testfairy.com/upload/dsym/"
 
 ZIP=zip
 CURL=curl
@@ -80,3 +82,4 @@ else
 fi
 
 log "TestFairy .dSYM upload script ends"
+
