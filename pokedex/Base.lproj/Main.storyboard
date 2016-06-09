@@ -12,7 +12,11 @@
             <string>SFUIDisplay-Bold</string>
             <string>SFUIDisplay-Bold</string>
         </mutableArray>
+        <mutableArray key="SF-UI-Display-Light.otf">
+            <string>SFUIDisplay-Light</string>
+        </mutableArray>
         <mutableArray key="SF-UI-Display-Medium.otf">
+            <string>SFUIDisplay-Medium</string>
             <string>SFUIDisplay-Medium</string>
             <string>SFUIDisplay-Medium</string>
             <string>SFUIDisplay-Medium</string>
@@ -432,13 +436,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vww-rv-iKA">
                                                 <rect key="frame" x="0.0" y="76" width="228" height="18"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZB-LG-EbM">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Attack:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZB-LG-EbM">
                                                         <rect key="frame" x="0.0" y="0.0" width="47" height="18"/>
                                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="15"/>
                                                         <color key="textColor" red="1" green="0.28235294119999998" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="888" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAj-7D-L9I">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="888" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAj-7D-L9I">
                                                         <rect key="frame" x="47" y="0.0" width="181" height="18"/>
                                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="15"/>
                                                         <color key="textColor" red="1" green="0.28235294119999998" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -522,7 +526,55 @@
                     <view key="view" contentMode="scaleToFill" id="Ga9-qG-VN5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yMh-vx-wgd">
+                                <rect key="frame" x="20" y="40" width="560" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="moveCell" rowHeight="70" id="1s7-e1-juD">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1s7-e1-juD" id="mvw-sX-DzB">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xee-1n-4Hr">
+                                                    <rect key="frame" x="225" y="8" width="111" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="IFU-pM-NPx"/>
+                                                        <constraint firstAttribute="width" constant="111" id="bWJ-Fa-JBL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.28235294119999998" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mm-Uq-9Ob">
+                                                    <rect key="frame" x="225" y="37" width="111" height="21"/>
+                                                    <fontDescription key="fontDescription" name="SFUIDisplay-Light" family="SF UI Display" pointSize="13"/>
+                                                    <color key="textColor" red="1" green="0.28235294119999998" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xee-1n-4Hr" firstAttribute="leading" secondItem="0Mm-Uq-9Ob" secondAttribute="leading" id="1qt-JT-IGW"/>
+                                                <constraint firstItem="0Mm-Uq-9Ob" firstAttribute="centerX" secondItem="mvw-sX-DzB" secondAttribute="centerX" id="FX1-ye-JY2"/>
+                                                <constraint firstItem="Xee-1n-4Hr" firstAttribute="centerX" secondItem="mvw-sX-DzB" secondAttribute="centerX" id="MbZ-nA-pgN"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0Mm-Uq-9Ob" secondAttribute="bottom" constant="3" id="WJP-dw-iWb"/>
+                                                <constraint firstItem="Xee-1n-4Hr" firstAttribute="top" secondItem="mvw-sX-DzB" secondAttribute="topMargin" id="gbO-EX-Awn"/>
+                                                <constraint firstItem="0Mm-Uq-9Ob" firstAttribute="top" secondItem="Xee-1n-4Hr" secondAttribute="bottom" constant="8" id="sJ9-t2-jsA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yMh-vx-wgd" firstAttribute="leading" secondItem="Ga9-qG-VN5" secondAttribute="leading" constant="20" id="TrH-tB-j8e"/>
+                            <constraint firstItem="yMh-vx-wgd" firstAttribute="top" secondItem="DIG-Pg-pjJ" secondAttribute="bottom" constant="20" id="ewD-0z-SJW"/>
+                            <constraint firstItem="M13-WK-LYe" firstAttribute="top" secondItem="yMh-vx-wgd" secondAttribute="bottom" constant="20" id="pAC-Lg-WvB"/>
+                            <constraint firstAttribute="trailing" secondItem="yMh-vx-wgd" secondAttribute="trailing" constant="20" id="yQB-ys-J6B"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UoJ-OV-xev" userLabel="First Responder" sceneMemberID="firstResponder"/>
