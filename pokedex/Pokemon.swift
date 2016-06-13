@@ -27,6 +27,21 @@ class Pokemon {
     private var _description: String!
     private var _nextEvoId: String?
     private var _hasEvolution: Bool = false
+    private var _moves: [Move]!
+    
+    
+    var moves: [Move] {
+        get{
+            if(self._moves == nil){
+                return [Move]()
+            }
+            return _moves
+        }
+        
+        set {
+            _moves = newValue
+        }
+    }
     
     var nextLevelUp: Int? {
         return _nextLevelUp
@@ -96,6 +111,7 @@ class Pokemon {
                     self._height = json["height"].stringValue
                     self.getPokemonTypes(json)
                     self.getEvolutions(json)
+                    self.getMoves(json)
                     self.getPokemonDescription(json, callback: callback)
                 }
             }
@@ -104,6 +120,23 @@ class Pokemon {
     
     func hasEvolution() -> Bool {
         return self._hasEvolution
+    }
+    
+    private func getMoves(json: JSON){
+        var moves = [Move]()
+        if let movesJson = json["moves"].array{
+            for moveJ in movesJson {
+                let move = Move()
+                move.name = moveJ["name"].stringValue
+                move.type = moveJ["learn_type"].stringValue
+                
+                moves.append(move)
+            }
+            self.moves = moves
+        }else{
+            self.moves = moves
+        }
+        
     }
     
     private func getPokemonTypes(json: JSON) {
