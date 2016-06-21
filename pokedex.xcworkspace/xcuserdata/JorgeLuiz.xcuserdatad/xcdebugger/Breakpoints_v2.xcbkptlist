@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokedex/Pokemon.swift"
-            timestampString = "487547446.940929"
+            timestampString = "488226708.132644"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "dowloadPokemonDetail(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokedex/Pokemon.swift"
-            timestampString = "487547960.570733"
+            timestampString = "488227567.517944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "Pokemon"
             landmarkType = "3">
             <Locations>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokedex/Pokemon.swift"
-            timestampString = "487547960.570733"
+            timestampString = "488227567.517944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
             landmarkName = "getDescriptionURL(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokedex/Pokemon.swift"
-            timestampString = "487547960.570733"
+            timestampString = "488227567.517944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "getPokemonTypes(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokedex/Pokemon.swift"
-            timestampString = "487547960.570733"
+            timestampString = "488227567.517944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "getPokemonTypes(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokedex/Pokemon.swift"
-            timestampString = "487547960.570733"
+            timestampString = "488227567.517944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "getPokemonTypes(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokedex/Pokemon.swift"
-            timestampString = "487547960.570733"
+            timestampString = "488227567.517944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "getPokemonTypes(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokedex/Pokemon.swift"
-            timestampString = "487547960.570733"
+            timestampString = "488227567.517944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "getPokemonTypes(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokedex/Pokemon.swift"
-            timestampString = "487547960.570733"
+            timestampString = "488227567.517944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "getPokemonTypes(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokedex/Pokemon.swift"
-            timestampString = "487547960.570733"
+            timestampString = "488227567.517944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "getEvolutions(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -353,22 +353,6 @@
             endingLineNumber = "13"
             landmarkName = "EnvironmentTest"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pokedex/PokemonInfoVC.swift"
-            timestampString = "487438384.334501"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -442,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokedex/Pokemon.swift"
-            timestampString = "487547928.66008"
+            timestampString = "488227567.517944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "getMoves(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -458,13 +442,77 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokedex/Pokemon.swift"
-            timestampString = "487548144.48885"
+            timestampString = "488227567.517944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "getMoves(_:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokedex/PokemonInfoVC.swift"
+            timestampString = "488227306.495927"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokedex/Pokemon.swift"
+            timestampString = "488227348.275471"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "dowloadPokemonDetail(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pokedex.Pokemon.(dowloadPokemonDetail (() -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "pokedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/JorgeLuiz/development/workspace/courses/IOS/IO9_Swift2/pokedex/pokedex/Pokemon.swift"
+                  timestampString = "488227751.868391"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "818">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pokedex.Pokemon.(dowloadPokemonDetail (() -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "pokedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/JorgeLuiz/development/workspace/courses/IOS/IO9_Swift2/pokedex/pokedex/Pokemon.swift"
+                  timestampString = "488227751.868596"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "890">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

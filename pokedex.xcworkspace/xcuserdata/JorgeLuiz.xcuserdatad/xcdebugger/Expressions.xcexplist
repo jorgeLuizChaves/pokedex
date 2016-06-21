@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "Pokemon.(getMoves in _8B6CA93A640370C1B8B60BDD929DCB3A)(JSON) -&gt; ():Pokemon.swift">
+         contextName = "Pokemon.(dowloadPokemonDetail(() -&gt; ()) -&gt; ()).(closure #1).(closure #1):Pokemon.swift">
          <PersistentStrings>
             <PersistentString
-               value = " move.type">
+               value = "json[&quot;description&quot;][0]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -36,6 +36,9 @@
                value = "json[&quot;height&quot;]">
             </PersistentString>
             <PersistentString
+               value = "res.data">
+            </PersistentString>
+            <PersistentString
                value = "urlPokeDescription">
             </PersistentString>
             <PersistentString
@@ -52,10 +55,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "Pokemon.(dowloadPokemonDetail(() -&gt; ()) -&gt; ()).(closure #1).(closure #1):Pokemon.swift">
+         contextName = "Pokemon.(getMoves in _8B6CA93A640370C1B8B60BDD929DCB3A)(JSON) -&gt; ():Pokemon.swift">
          <PersistentStrings>
             <PersistentString
-               value = "json[&quot;description&quot;][0]">
+               value = " move.type">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

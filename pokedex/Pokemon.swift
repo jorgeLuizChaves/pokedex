@@ -29,6 +29,13 @@ class Pokemon {
     private var _hasEvolution: Bool = false
     private var _moves: [Move]!
     
+    private var _httpStatus: Int!
+    
+    var httpStatus: Int {
+        get{
+            return _httpStatus
+        }
+    }
     
     var moves: [Move] {
         get{
@@ -99,23 +106,38 @@ class Pokemon {
     
     func dowloadPokemonDetail(callback: DownloadComplete){
         Alamofire.request(.GET, self.pokemonUrl).responseJSON { (response: Response<AnyObject, NSError>?) in
-           //print(value.debugDescription)
             
             if let res = response {
-                if let jsonData = res.data {
+                
+                if let jsonData = res.data, httpCode = res.response?.statusCode  {
                     let json = JSON(data: jsonData)
+                    self._httpStatus = httpCode
                     
-                    self._weight = json["weight"].stringValue
-                    self._attack = json["attack"].intValue
-                    self._defense = json["defense"].intValue
-                    self._height = json["height"].stringValue
-                    self.getPokemonTypes(json)
-                    self.getEvolutions(json)
-                    self.getMoves(json)
-                    self.getPokemonDescription(json, callback: callback)
+                    if(self.isHttpSuccess()){
+                        self._weight = json["weight"].stringValue
+                        self._attack = json["attack"].intValue
+                        self._defense = json["defense"].intValue
+                        self._height = json["height"].stringValue
+                        self.getPokemonTypes(json)
+                        self.getEvolutions(json)
+                        self.getMoves(json)
+                        self.getPokemonDescription(json, callback: callback)
+                    }else{
+                        callback()
+                    }
+                }else{
+                    self._httpStatus = 500
+                     callback()
                 }
             }
         }
+    }
+    
+    private func isHttpSuccess() -> Bool{
+        if(_httpStatus == 200){
+            return true
+        }
+        return false
     }
     
     func hasEvolution() -> Bool {

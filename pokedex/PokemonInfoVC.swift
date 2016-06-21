@@ -32,27 +32,37 @@ class PokemonInfoVC: PokemonVC {
 
         pokemon.dowloadPokemonDetail{ ()  in
             //this will be called after download is done
-            let pokemon = self.pokemon
-            self.pokeImage.image =  UIImage(named: "\(pokemon.pokedexId)")
-            self.pokedexId.text = "\(pokemon.pokedexId)"
-            self.width.text = pokemon.weight
-            self.attack.text = "\(pokemon.attack)"
-            self.defense.text = "\(pokemon.defense)"
-            self.height.text = pokemon.height
-            self.desc.text = pokemon.description
-            self.type.text = pokemon.types
-            
-            self.actualEvo.image =  UIImage(named: "\(pokemon.pokedexId)")
-            if(pokemon.hasEvolution()){
-                if let nextLevelUp = pokemon.nextLevelUp, nextLevelId = pokemon.nextEvoId {
-                    self.nextEvolutionLabel.text = "\(nextLevelUp) levels to evolution"
-                    self.nextEvo.hidden = false
-                    self.nextEvo.image = UIImage(named: nextLevelId)
+            if(self.pokemon.httpStatus == 200 ){
+                let pokemon = self.pokemon
+                self.pokeImage.image =  UIImage(named: "\(pokemon.pokedexId)")
+                self.pokedexId.text = "\(pokemon.pokedexId)"
+                self.width.text = pokemon.weight
+                self.attack.text = "\(pokemon.attack)"
+                self.defense.text = "\(pokemon.defense)"
+                self.height.text = pokemon.height
+                self.desc.text = pokemon.description
+                self.type.text = pokemon.types
+                
+                self.actualEvo.image =  UIImage(named: "\(pokemon.pokedexId)")
+                if(pokemon.hasEvolution()){
+                    if let nextLevelUp = pokemon.nextLevelUp, nextLevelId = pokemon.nextEvoId {
+                        self.nextEvolutionLabel.text = "\(nextLevelUp) levels to evolution"
+                        self.nextEvo.hidden = false
+                        self.nextEvo.image = UIImage(named: nextLevelId)
+                    }
+                }else{
+                    self.nextEvo.hidden = true
+                    self.nextEvolutionLabel.text = "No evolution"
                 }
             }else{
-                self.nextEvo.hidden = true
-                self.nextEvolutionLabel.text = "No evolution"
+                let alert = UIAlertController(title: "Erro", message: "Desculpe não conseguimos buscar informações deste pokemon.", preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction!) in
+                }
+                alert.addAction(OKAction)
+                
+                self.presentViewController(alert, animated: true, completion: nil)
             }
+            
         }
 
     }
